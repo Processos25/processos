@@ -20,6 +20,10 @@ body {
   min-width: 100%;
 }
 
+#mobile {
+  display: none;
+}
+
 .container {
   position: relative;
 
@@ -74,6 +78,11 @@ h3 {
 @media (max-width: 600px) {
 
   #player {
+    display: none;
+  }
+
+  #mobile {
+    display: flex;
     position: fixed;
     width: 100%;
     background-position: center;
