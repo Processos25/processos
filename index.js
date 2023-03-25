@@ -1,4 +1,3 @@
-
 let docTitle = document.title 
 
 window.addEventListener('blur', () => {
