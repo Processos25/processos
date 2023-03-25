@@ -4,15 +4,33 @@
   box-sizing: border-box;
 }
 
+:root {
+  --colorBackBody: rgba(0, 0, 0, 0.6);
+  --colorBackContainer: rgba(0, 0, 0, 0.6);
+  --colorBackLi: #1d87bd;
+  --colorLetraLi: #ffffff;
+  --colorLetraA: #ffffff;
+  --colorBackContainerMobi: #000000;
+}
+
 body {
   color:aliceblue;
 
-  background: rgba(0, 0, 0, 0.6);
+  background: var(--colorBackBody);
+}
+
+main, header {
+  padding-top: 50px;
 }
 
 .logo img {
   width: 200px;
   position: relative;
+}
+
+.logo img:hover {
+  transform: scale(1.1);
+  transition: 1s;
 }
 
 #player {
@@ -27,8 +45,9 @@ body {
 .container {
   position: relative;
 
-  background: rgba(0, 0, 0, 0.6);
+  background: var(--colorBackContainer);
   height: 100%;
+
 }
 
 main {
@@ -41,8 +60,8 @@ main {
   
 }
 
-a, li {
-  background-color: #1d87bd;
+li {
+  background-color: var(--colorBackLi);
   border-radius: 5px;
   padding: 3px;
   
@@ -52,7 +71,15 @@ a, li {
   
   list-style: none;
   text-decoration: none;
-  color: aliceblue;
+  color: var(--colorLetraLi);
+
+  cursor: pointer;
+}
+
+a {
+  list-style: none;
+  text-decoration: none;
+  color: var(--colorLetraA);
 
   cursor: pointer;
 }
@@ -89,14 +116,15 @@ h3 {
   }
   header {
     position: fixed;
-  }
-  .container {
+   }
+
+   .container {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     position: static;
     padding-top: 280px;
-    background-color: black;
+    background-color: var(--colorBackContainerMobi);
   }
 }
